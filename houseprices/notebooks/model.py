@@ -7,7 +7,7 @@ import numpy as np
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.svm import SVR
 from mlxtend.regressor import StackingCVRegressor
-# import xgboost import XGBRegressor
+import xgboost import XGBRegressor
 
 # Misc
 from sklearn.model_selection import GridSearchCV
@@ -23,6 +23,7 @@ from sklearn.decomposition import PCA
 
 import pickle
 import joblib
+import os
 
 # Load data
 train_X = pd.read_csv('../data/processed/train_X.csv')
@@ -32,7 +33,9 @@ test_X = pd.read_csv('../data/processed/test_X.csv')
 
 
 def load_data():
-
+    train_X = pd.read_csv('../data/processed/train_X.csv')
+    train_y = pd.read_csv('../data/processed/train_y.csv')
+    test_X = pd.read_csv('../data/processed/test_X.csv')
 
 def load_model():
 
